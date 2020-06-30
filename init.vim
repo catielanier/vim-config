@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'vimlab/split-term.vim'
   Plug 'tpope/vim-surround'
+  Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " Config section
