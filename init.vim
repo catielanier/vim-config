@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'vimlab/split-term.vim'
+  Plug 'tpope/vim-surround'
 call plug#end()
 
 " Config section
