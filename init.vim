@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'wakatime/vim-wakatime'
+  Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " Config section
