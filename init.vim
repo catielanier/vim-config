@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vimlab/split-term.vim'
   Plug 'tpope/vim-surround'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " Config section
