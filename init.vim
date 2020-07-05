@@ -14,6 +14,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'editorconfig/editorconfig-vim'
   Plug 'wakatime/vim-wakatime'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'burner/vim-svelte'
+  Plug 'posva/vim-vue'
 call plug#end()
 
 " Config section
