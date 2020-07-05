@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'burner/vim-svelte'
   Plug 'posva/vim-vue'
+  Plug 'vim-python/python-syntax'
 call plug#end()
 
 " Config section
