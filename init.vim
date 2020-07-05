@@ -78,3 +78,4 @@ function! NERDCommenter_after()
     let g:ft = ''
   endif
 endfunction
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
