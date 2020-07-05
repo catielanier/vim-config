@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Config section
+set number
 if (has("termguicolors"))
   set termguicolors
 endif
