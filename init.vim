@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'burner/vim-svelte'
   Plug 'posva/vim-vue'
   Plug 'vim-python/python-syntax'
+  Plug 'sts10/vim-pink-moon'
 call plug#end()
 
 " Config section
@@ -25,7 +26,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 syntax enable
-colorscheme dracula
+colorscheme pink-moon
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
