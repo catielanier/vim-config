@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'posva/vim-vue'
   Plug 'vim-python/python-syntax'
   Plug 'sts10/vim-pink-moon'
+  Plug 'nightsense/strawberry'
 call plug#end()
 
 " Config section
