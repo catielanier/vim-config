@@ -23,11 +23,12 @@ call plug#end()
 
 " Config section
 set number
+set clipboard=unnamedplus
 if (has("termguicolors"))
   set termguicolors
 endif
 syntax enable
-colorscheme pink-moon
+colorscheme strawberry-dark
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
