@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " Config section
