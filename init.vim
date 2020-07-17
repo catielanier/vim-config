@@ -19,6 +19,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-python/python-syntax'
   Plug 'sts10/vim-pink-moon'
   Plug 'nightsense/strawberry'
+  Plug 'mhinz/vim-signify'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'junegunn/gv.vim'
 call plug#end()
 
 " Config section
