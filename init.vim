@@ -23,6 +23,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'junegunn/seoul256.vim'
   Plug 'itchyny/lightline.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'elzr/vim-json'
+  Plug 'mxw/vim-jsx'
 call plug#end()
 
 " Config section
