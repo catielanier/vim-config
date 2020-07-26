@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
   " Plugin section
-  Plug 'dracula/vim'
   Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -17,13 +16,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'burner/vim-svelte'
   Plug 'posva/vim-vue'
   Plug 'vim-python/python-syntax'
-  Plug 'sts10/vim-pink-moon'
-  Plug 'nightsense/strawberry'
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
   Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'junegunn/seoul256.vim'
+  Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " Config section
@@ -33,7 +32,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 syntax enable
-colorscheme strawberry-dark
+colorscheme seoul256
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
@@ -91,3 +90,7 @@ function! NERDCommenter_after()
   endif
 endfunction
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:lightline = {
+  \ 'colorschome': 'seoul256',
+  \ }
+set noshowmode
