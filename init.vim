@@ -94,6 +94,6 @@ function! NERDCommenter_after()
 endfunction
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:lightline = {
-  \ 'colorschome': 'seoul256',
+  \ 'colorscheme': 'seoul256',
   \ }
 set noshowmode
