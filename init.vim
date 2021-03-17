@@ -28,6 +28,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'udalov/kotlin-vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'hsanson/vim-android'
 call plug#end()
 
 " Config section
@@ -59,7 +60,7 @@ function! OpenTerminal()
   resize 10
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
-" use alt+hjkl to move between split/vsplit panels
+" use alt+hjkl/opt+hjkl to move between split/vsplit panels
 tnoremap <M-h> <C-\><C-n><C-w>h
 tnoremap <M-j> <C-\><C-n><C-w>j
 tnoremap <M-k> <C-\><C-n><C-w>k
@@ -69,6 +70,10 @@ nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 nnoremap <C-p> :FZF<CR>
+
+" Set F5 to compile Android projects and install to emulator
+nmap <F5> <ESC>:Gradle assembleDebug<CR>
+
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
@@ -95,7 +100,28 @@ function! NERDCommenter_after()
   endif
 endfunction
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Set autosync in Android projects when build.gradle is written to
+au BufWrite build.gradle call gradle#sync()
+
+" Set lightline theme and add gradle integrations
 let g:lightline = {
   \ 'colorscheme': 'seoul256',
+  \ 'active': {
+  \    'left': [ ['gradle_project'] ],
+  \    'right': [ ['gradle_running'], ['gradle_errors'], ['gradle_warnings'] ]
+  \ },
+  \ 'component_expand': {
+  \    'gradle_errors': 'lightline#gradle#errors',
+  \    'gradle_warnings': 'lightline#gradle#warnings',
+  \    'gradle_running': 'lightline#gradle#running',
+  \    'gradle_project': 'lightline#gradle#project'
+  \ },
+  \ 'component_type': {
+  \    'gradle_errors': 'error',
+  \    'gradle_warnings': 'warning',
+  \    'gradle_running': 'left',
+  \    'gradle_project': 'left'
+  \ }
   \ }
 set noshowmode
