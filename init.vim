@@ -34,6 +34,9 @@ call plug#end()
 " Config section
 set number
 set clipboard=unnamedplus
+set tabstop=2
+set shiftwidth=2
+set expandtab
 if (has("termguicolors"))
   set termguicolors
 endif
