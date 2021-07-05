@@ -110,21 +110,5 @@ au BufWrite build.gradle call gradle#sync()
 " Set lightline theme and add gradle integrations
 let g:lightline = {
   \ 'colorscheme': 'seoul256',
-  \ 'active': {
-  \    'left': [ ['gradle_project'] ],
-  \    'right': [ ['gradle_running'], ['gradle_errors'], ['gradle_warnings'] ]
-  \ },
-  \ 'component_expand': {
-  \    'gradle_errors': 'lightline#gradle#errors',
-  \    'gradle_warnings': 'lightline#gradle#warnings',
-  \    'gradle_running': 'lightline#gradle#running',
-  \    'gradle_project': 'lightline#gradle#project'
-  \ },
-  \ 'component_type': {
-  \    'gradle_errors': 'error',
-  \    'gradle_warnings': 'warning',
-  \    'gradle_running': 'left',
-  \    'gradle_project': 'left'
-  \ }
   \ }
 set noshowmode
