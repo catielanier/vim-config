@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-vetur', 'coc-svelte', 'coc-angular', 'coc-python', 'coc-pairs', 'coc-snippets', 'coc-kotlin', 'coc-go']
+  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-vetur', 'coc-svelte', 'coc-angular', 'coc-python', 'coc-pairs', 'coc-snippets', 'coc-kotlin', 'coc-go', 'coc-sql']
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'vimlab/split-term.vim'
@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'udalov/kotlin-vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'hsanson/vim-android'
+  Plug 'APZelos/blamer.nvim'
 call plug#end()
 
 " Config section
@@ -48,6 +49,7 @@ let g:NERDTreeIgnore = []
 let g:NERDTreeStatusLine = ''
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:blamer_enabled = 1
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 " open new split panes to right and below
