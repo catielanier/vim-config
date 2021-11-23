@@ -76,6 +76,7 @@ nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 nnoremap <C-p> :FZF<CR>
+nnoremap <C-f> :Rg<CR>
 
 " Set F5 to compile Android projects and install to emulator
 nmap <F5> <ESC>:Gradle assembleDebug<CR>
@@ -86,6 +87,8 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit'
   \}
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" Set Rg to not search filenames, we want Ag to do that.
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 let g:ft = ''
 function! NERDCommenter_before()
   if &ft == 'vue'
