@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-vetur', 'coc-svelte', 'coc-angular', 'coc-deno', 'coc-python', 'coc-pairs', 'coc-snippets', 'coc-kotlin', 'coc-go', 'coc-sql']
+  let g:coc_global_extensions = ['coc-emmet', 'coc-flutter', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-vetur', 'coc-svelte', 'coc-angular', 'coc-deno', 'coc-python', 'coc-pairs', 'coc-snippets', 'coc-kotlin', 'coc-go', 'coc-sql']
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'vimlab/split-term.vim'
@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'hsanson/vim-android'
   Plug 'APZelos/blamer.nvim'
+  Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 " Config section
