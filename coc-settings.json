@@ -15,5 +15,7 @@
     "scss",
     "python",
     "go"
-  ]
+  ],
+  "eslint.format.enable": true,
+  "eslint.autoFixOnSave": true
 }
