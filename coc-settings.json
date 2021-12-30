@@ -17,5 +17,6 @@
     "go"
   ],
   "eslint.format.enable": true,
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onType"
 }
