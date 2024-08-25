@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hsanson/vim-android'
   Plug 'APZelos/blamer.nvim'
   Plug 'dart-lang/dart-vim-plugin'
+  Plug 'StanAngeloff/php.vim'
 call plug#end()
 
 " Config section
