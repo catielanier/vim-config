@@ -14,7 +14,8 @@
     "css",
     "scss",
     "python",
-    "go"
+    "go",
+    "php"
   ],
   "eslint.format.enable": true,
   "eslint.autoFixOnSave": true,
