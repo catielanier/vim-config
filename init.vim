@@ -21,7 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'junegunn/seoul256.vim'
+  Plug 'catielanier/springtime-girls'
   Plug 'itchyny/lightline.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'elzr/vim-json'
@@ -44,7 +44,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 syntax enable
-colorscheme seoul256
+colorscheme springtime-girls
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
@@ -117,6 +117,6 @@ au BufWrite build.gradle call gradle#sync()
 
 " Set lightline theme and add gradle integrations
 let g:lightline = {
-  \ 'colorscheme': 'seoul256',
+  \ 'colorscheme': 'springtime_girls',
   \ }
 set noshowmode
