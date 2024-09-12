@@ -80,6 +80,9 @@ nnoremap <M-l> <C-w>l
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-f> :Rg<CR>
 
+" Force enter to autocomplete with coc intellisense
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
 " Set F5 to compile Android projects and install to emulator
 nmap <F5> <ESC>:Gradle assembleDebug<CR>
 
