@@ -21,7 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'catielanier/springtime-girls'
+  Plug 'nightsense/strawberry'
   Plug 'itchyny/lightline.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'elzr/vim-json'
@@ -32,8 +32,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'APZelos/blamer.nvim'
   Plug 'dart-lang/dart-vim-plugin'
   Plug 'StanAngeloff/php.vim'
+  Plug 'augmentcode/augment.vim'
 call plug#end()
-
 " Config section
 set number
 set clipboard=unnamedplus
@@ -44,7 +44,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 syntax enable
-colorscheme springtime-girls
+colorscheme strawberry-light
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
@@ -79,13 +79,10 @@ nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-f> :Rg<CR>
-
 " Force enter to autocomplete with coc intellisense
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
 " Set F5 to compile Android projects and install to emulator
 nmap <F5> <ESC>:Gradle assembleDebug<CR>
-
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
@@ -114,12 +111,9 @@ function! NERDCommenter_after()
   endif
 endfunction
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
 " Set autosync in Android projects when build.gradle is written to
 au BufWrite build.gradle call gradle#sync()
-
 " Set lightline theme and add gradle integrations
 let g:lightline = {
-  \ 'colorscheme': 'springtime_girls',
-  \ }
+  \ 'colorscheme': 'girls_theme' }
 set noshowmode
