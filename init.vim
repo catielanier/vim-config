@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'dart-lang/dart-vim-plugin'
   Plug 'StanAngeloff/php.vim'
   Plug 'augmentcode/augment.vim'
+  Plug 'rust-lang/rust.vim'
 call plug#end()
 " Config section
 set number
