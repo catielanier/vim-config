@@ -15,7 +15,8 @@
     "scss",
     "python",
     "go",
-    "php"
+    "php",
+    "rust"
   ],
   "eslint.format.enable": true,
   "eslint.autoFixOnSave": true,
