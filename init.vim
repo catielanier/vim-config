@@ -34,6 +34,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'StanAngeloff/php.vim'
   Plug 'augmentcode/augment.vim'
   Plug 'rust-lang/rust.vim'
+  Plug 'greggh/claude-code.nvim'
+  Plug 'github/copilot.vim'
 call plug#end()
 " Config section
 set number
@@ -115,6 +117,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Set autosync in Android projects when build.gradle is written to
 au BufWrite build.gradle call gradle#sync()
 " Set lightline theme and add gradle integrations
-let g:lightline = {
-  \ 'colorscheme': 'girls_theme' }
 set noshowmode
+" Setup Claude
+lua require('claude-code').setup()
+" Copilot Keybindings
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
