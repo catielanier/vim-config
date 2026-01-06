@@ -36,6 +36,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim'
   Plug 'greggh/claude-code.nvim'
   Plug 'github/copilot.vim'
+  Plug 'folke/todo-comments.nvim'
+  Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 " Config section
 set number
