@@ -81,7 +81,9 @@ nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 nnoremap <C-p> :FZF<CR>
+nnoremap <F13> :FZF<CR>
 nnoremap <C-f> :Rg<CR>
+nnoremap <F14> :Rg<CR>
 " Force enter to autocomplete with coc intellisense
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " Set F5 to compile Android projects and install to emulator
@@ -122,4 +124,5 @@ set noshowmode
 lua require('claude-code').setup()
 " Copilot Keybindings
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+imap <silent><script><expr> <F19> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
