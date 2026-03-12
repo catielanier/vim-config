@@ -16,7 +16,8 @@
     "python",
     "go",
     "php",
-    "rust"
+    "rust",
+    "marko"
   ],
   "eslint.format.enable": true,
   "eslint.autoFixOnSave": true,
