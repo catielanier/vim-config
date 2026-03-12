@@ -38,6 +38,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'github/copilot.vim'
   Plug 'folke/todo-comments.nvim'
   Plug 'nvim-lua/plenary.nvim'
+  Plug 'mohseenrm/marko.nvim'
 call plug#end()
 " Config section
 set number
